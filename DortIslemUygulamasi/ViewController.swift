@@ -1,33 +1,30 @@
-//
 //  ViewController.swift
 //  DortIslemUygulamasi
-//
-//  Created by Furkan Çapkın on 23.06.2023.
-//
 
 import UIKit
 
 class ViewController: UIViewController {
     @IBOutlet weak var IlkText: UITextField!
-    
     @IBOutlet weak var IkinciText: UITextField!
-    
-    
     @IBOutlet weak var SonucLabel: UILabel!
-    
+    //Ekrandaki değikenleri burada tanımladım.
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
+        
     }
     
     @IBAction func toplama(_ sender: Any) {
         
         if let ilkSayi = Int(IlkText.text!){
+        /*kullanıcının girdiği değeri Int tipine dönüştürüyorum
+          eğer hata çıkarsa if bloğuna girmeyecek.*/
             if let ikinciSayi = Int(IkinciText.text!){
                 
                 let sonuc = ilkSayi + ikinciSayi
+                //Toplama işlemi yapılıyor.
                 SonucLabel.text = String(sonuc)
+                //İşlemin sonucu SonucLabel text'ine yazılıyor.
             }
         }
     }
@@ -38,7 +35,9 @@ class ViewController: UIViewController {
             if let ikinciSayi = Int(IkinciText.text!){
                 
                 let sonuc = ilkSayi - ikinciSayi
+                //Çıkarma işlemi yapılıyor.
                 SonucLabel.text = String(sonuc)
+                //İşlemin sonucu SonucLabel text'ine yazılıyor.
             }
         }
     }
@@ -49,7 +48,9 @@ class ViewController: UIViewController {
             if let ikinciSayi = Int(IkinciText.text!){
                 
                 let sonuc = ilkSayi / ikinciSayi
+                //Bölme işlemi yapılıyor.
                 SonucLabel.text = String(sonuc)
+                //İşlemin sonucu SonucLabel text'ine yazılıyor.
             }
         }
     }
@@ -60,10 +61,11 @@ class ViewController: UIViewController {
             if let ikinciSayi = Int(IkinciText.text!){
                 
                 let sonuc = ilkSayi * ikinciSayi
+                //Çarpma işlemi yapılıyor.
                 SonucLabel.text = String(sonuc)
+                //İşlemin sonucu SonucLabel text'ine yazılıyor.
             }
         }
     }
-
 }
 
